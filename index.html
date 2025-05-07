@@ -6,6 +6,9 @@
     <title>Evan Schubert - Computer Science Student</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="nav-bar">
@@ -16,82 +19,156 @@
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#publications">Publications</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="nav-button">Contact</a></li>
             </ul>
+            <button class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
     <header class="hero">
         <div class="container">
-            <h1>Evan Schubert</h1>
-            <p class="subtitle">Computer Science Student at MSOE</p>
-            <div class="social-links">
-                <a href="mailto:schuberte@msoe.edu"><i class="fas fa-envelope"></i></a>
-                <a href="https://linkedin.com/in/schubertevan/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <div class="hero-content">
+                <h1>Computer Science Student & Researcher</h1>
+                <p class="subtitle">Specializing in Machine Learning and Software Development</p>
+                <div class="hero-buttons">
+                    <a href="#publications" class="button primary">View Publications</a>
+                    <a href="#contact" class="button secondary">Get in Touch</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="gradient-blob"></div>
             </div>
         </div>
     </header>
 
     <section id="about" class="section">
         <div class="container">
-            <h2>About Me</h2>
-            <p>B.S. Computer Science student at MSOE with internship experience and numerous, diverse, hands-on and team-based project experiences. Skilled in Python, Java, SQL, R, and C/C++, with expertise in Data Structures & Algorithms, Agile, AWS, and Git.</p>
+            <div class="section-header">
+                <h2>About Me</h2>
+                <p class="section-subtitle">B.S. Computer Science student at MSOE with a passion for innovation</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Education</h3>
+                    <p>Milwaukee School of Engineering</p>
+                    <p>B.S. Computer Science</p>
+                    <p>GPA: 3.19</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Skills</h3>
+                    <p>Python, Java, SQL, R, C/C++</p>
+                    <p>Data Structures & Algorithms</p>
+                    <p>AWS, Git, Agile</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-trophy"></i>
+                    <h3>Achievements</h3>
+                    <p>1st Place - LLM Chatbot Prompt Writing</p>
+                    <p>3rd Place - Best Undergraduate Research Paper</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="experience" class="section">
         <div class="container">
-            <h2>Experience</h2>
-            <div class="experience-card">
-                <h3>IT Client Services Intern</h3>
-                <p class="company">American Transmission Company | Pewaukee, WI</p>
-                <p class="date">May 2024 – August 2024</p>
-                <ul>
-                    <li>Collaborated with Data Analytics Team to develop SQL queries for asset inspection analysis</li>
-                    <li>Leveraged PowerBI for data visualization and presentation</li>
-                    <li>Facilitated company-wide software migration and implementation</li>
-                </ul>
+            <div class="section-header">
+                <h2>Experience</h2>
+                <p class="section-subtitle">Professional journey and internships</p>
             </div>
-            <div class="experience-card">
-                <h3>Desktop Admin Intern</h3>
-                <p class="company">American Transmission Company | Pewaukee, WI</p>
-                <p class="date">May 2023 – Jan 2024</p>
-                <ul>
-                    <li>Managed software & hardware deployment projects</li>
-                    <li>Provided comprehensive technical support and device provisioning</li>
-                    <li>Developed strong customer service skills</li>
-                </ul>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>IT Client Services Intern</h3>
+                        <span class="tag">Current</span>
+                    </div>
+                    <p class="company">American Transmission Company</p>
+                    <p class="date">May 2024 – August 2024</p>
+                    <ul>
+                        <li>Collaborated with Data Analytics Team to develop SQL queries for asset inspection analysis</li>
+                        <li>Leveraged PowerBI for data visualization and presentation</li>
+                        <li>Facilitated company-wide software migration and implementation</li>
+                    </ul>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>Desktop Admin Intern</h3>
+                    </div>
+                    <p class="company">American Transmission Company</p>
+                    <p class="date">May 2023 – Jan 2024</p>
+                    <ul>
+                        <li>Managed software & hardware deployment projects</li>
+                        <li>Provided comprehensive technical support and device provisioning</li>
+                        <li>Developed strong customer service skills</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="publications" class="section">
         <div class="container">
-            <h2>Publications</h2>
-            <div class="publication-card">
-                <h3>Machine Learning-Assisted Vocal Cord Ultrasound Examination: Project VIPR</h3>
-                <a href="https://drive.google.com/file/d/1A4-Z5jlpEH6PvEz1E_MYq7pu8JTWw5w3/view" target="_blank" class="button">Read Paper</a>
+            <div class="section-header">
+                <h2>Publications</h2>
+                <p class="section-subtitle">Research papers and academic contributions</p>
             </div>
-            <div class="publication-card">
-                <h3>Reading Between the Lungs: Evaluation of Deep Learning Model Architectures for COVID-19 Classification on Segmented Chest X-rays</h3>
-                <a href="https://drive.google.com/file/d/1glyTtyK3NwzKZMlQXTDvjHmZ0OsCvJ43/view" target="_blank" class="button">Read Paper</a>
+            <div class="publications-grid">
+                <div class="publication-card">
+                    <div class="publication-content">
+                        <h3>Machine Learning-Assisted Vocal Cord Ultrasound Examination: Project VIPR</h3>
+                        <p class="publication-description">Advanced research in medical imaging and machine learning applications</p>
+                        <a href="https://drive.google.com/file/d/1A4-Z5jlpEH6PvEz1E_MYq7pu8JTWw5w3/view" target="_blank" class="button primary">Read Paper</a>
+                    </div>
+                </div>
+                <div class="publication-card">
+                    <div class="publication-content">
+                        <h3>Reading Between the Lungs: Evaluation of Deep Learning Model Architectures for COVID-19 Classification on Segmented Chest X-rays</h3>
+                        <p class="publication-description">Innovative approach to COVID-19 detection using deep learning</p>
+                        <a href="https://drive.google.com/file/d/1glyTtyK3NwzKZMlQXTDvjHmZ0OsCvJ43/view" target="_blank" class="button primary">Read Paper</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="contact" class="section">
         <div class="container">
-            <h2>Contact</h2>
-            <div class="contact-info">
-                <p><i class="fas fa-envelope"></i> schuberte@msoe.edu</p>
-                <p><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/schubertevan/" target="_blank">linkedin.com/in/schubertevan/</a></p>
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+                <p class="section-subtitle">Let's connect and discuss opportunities</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <a href="mailto:schuberte@msoe.edu">schuberte@msoe.edu</a>
+                </div>
+                <div class="contact-card">
+                    <i class="fab fa-linkedin"></i>
+                    <h3>LinkedIn</h3>
+                    <a href="https://linkedin.com/in/schubertevan/" target="_blank">linkedin.com/in/schubertevan/</a>
+                </div>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Evan Schubert. All rights reserved.</p>
+            <div class="footer-content">
+                <p>&copy; 2025 Evan Schubert. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#about">About</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#publications">Publications</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
         </div>
     </footer>
 </body>
