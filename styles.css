@@ -1,11 +1,12 @@
 :root {
-    --primary-color: #007AFF;
+    --primary-color: #000000;
     --background-color: #ffffff;
     --text-color: #1d1d1f;
     --secondary-text: #86868b;
     --section-bg: #f5f5f7;
     --card-bg: #ffffff;
-    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
@@ -70,21 +71,47 @@ body {
 
 /* Hero Section */
 .hero {
-    padding: 120px 0 60px;
-    text-align: center;
-    background: var(--section-bg);
+    padding: 180px 0 100px;
+    text-align: left;
+    background: var(--background-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: radial-gradient(circle, var(--section-bg) 0%, transparent 70%);
+    z-index: 0;
+    opacity: 0.5;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .hero h1 {
-    font-size: 48px;
+    font-size: 64px;
+    line-height: 1.1;
     font-weight: 700;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
+    background: linear-gradient(to right, var(--text-color), var(--secondary-text));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .subtitle {
-    font-size: 24px;
+    font-size: 28px;
     color: var(--secondary-text);
-    margin-bottom: 32px;
+    margin-bottom: 48px;
+    max-width: 600px;
 }
 
 .social-links {
@@ -106,6 +133,7 @@ body {
 /* Sections */
 .section {
     padding: 80px 0;
+    animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section:nth-child(even) {
@@ -121,10 +149,17 @@ body {
 /* Experience Cards */
 .experience-card {
     background: var(--card-bg);
-    border-radius: 12px;
-    padding: 24px;
-    margin-bottom: 24px;
+    border-radius: 24px;
+    padding: 32px;
+    margin-bottom: 32px;
     box-shadow: var(--shadow);
+    transition: var(--transition);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.experience-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
 .experience-card h3 {
@@ -155,10 +190,17 @@ body {
 /* Publication Cards */
 .publication-card {
     background: var(--card-bg);
-    border-radius: 12px;
-    padding: 24px;
-    margin-bottom: 24px;
+    border-radius: 24px;
+    padding: 32px;
+    margin-bottom: 32px;
     box-shadow: var(--shadow);
+    transition: var(--transition);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.publication-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
 .publication-card h3 {
@@ -168,16 +210,18 @@ body {
 
 .button {
     display: inline-block;
-    padding: 12px 24px;
-    background-color: var(--primary-color);
+    padding: 16px 32px;
+    background-color: var(--text-color);
     color: white;
     text-decoration: none;
-    border-radius: 6px;
-    transition: background-color 0.3s ease;
+    border-radius: 12px;
+    transition: var(--transition);
+    font-weight: 500;
 }
 
 .button:hover {
-    background-color: #0056b3;
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
 }
 
 /* Contact Section */
@@ -239,14 +283,10 @@ footer {
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(30px);
     }
     to {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-.section {
-    animation: fadeIn 0.6s ease-out;
 } 
