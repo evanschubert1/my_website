@@ -119,31 +119,128 @@ body {
 }
 
 @media (max-width: 768px) {
-    .mobile-menu {
-        display: flex;
+    .container {
+        padding: 0 16px;
     }
 
     .nav-links {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 70%;
-        height: 100vh;
-        background-color: white;
+        display: none;
+    }
+    
+    .mobile-menu {
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .mobile-menu span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background-color: var(--text-color);
+        margin: 6px 0;
+        transition: var(--transition);
+    }
+    
+    .hero {
+        padding: 120px 0 60px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+        word-wrap: break-word;
+    }
+    
+    .subtitle {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
         flex-direction: column;
+        gap: 12px;
+    }
+
+    .button {
+        width: 100%;
         justify-content: center;
-        align-items: center;
-        gap: 2rem;
-        transition: right 0.3s ease;
-        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .section {
+        padding: 60px 0;
+    }
+    
+    .section-header h2 {
+        font-size: 28px;
     }
 
-    .nav-links.active {
-        right: 0;
+    .section-header {
+        padding: 0 16px;
+    }
+    
+    .experience-grid,
+    .publications-grid,
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
     }
 
-    .nav-links a {
-        font-size: 1.2rem;
+    .experience-card,
+    .publication-card,
+    .about-card,
+    .contact-card {
+        padding: 24px;
+    }
+
+    .publication-content h3 {
+        font-size: 18px;
+        word-wrap: break-word;
+    }
+
+    .award-badge {
+        font-size: 12px;
+        padding: 6px 12px;
+        left: -12px;
+    }
+
+    .awards-showcase {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 24px;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Additional mobile optimizations for very small screens */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .section-header h2 {
+        font-size: 24px;
+    }
+
+    .experience-card ul,
+    .publication-card ul {
+        padding-left: 20px;
+    }
+
+    .award-item {
+        padding: 20px;
+    }
+
+    .award-item i {
+        font-size: 32px;
     }
 }
 
