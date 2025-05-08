@@ -218,6 +218,73 @@ body {
         flex-wrap: wrap;
         justify-content: center;
     }
+
+    .experience-grid,
+    .publications-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 0 8px;
+    }
+
+    .experience-card,
+    .publication-card {
+        padding: 20px;
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+
+    .experience-card ul,
+    .publication-card ul {
+        padding-left: 20px;
+        margin: 12px 0;
+    }
+
+    .experience-card li,
+    .publication-card li {
+        margin-bottom: 8px;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .experience-header h3,
+    .publication-content h3 {
+        font-size: 18px;
+        line-height: 1.4;
+        margin-bottom: 8px;
+    }
+
+    .company,
+    .date {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .publication-description {
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+
+    .award-badge {
+        position: relative;
+        left: 0;
+        top: 0;
+        margin-bottom: 16px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .publication-content {
+        padding: 0;
+    }
+
+    .button.primary {
+        width: 100%;
+        text-align: center;
+        margin-top: 12px;
+    }
 }
 
 /* Additional mobile optimizations for very small screens */
@@ -230,17 +297,25 @@ body {
         font-size: 24px;
     }
 
-    .experience-card ul,
-    .publication-card ul {
-        padding-left: 20px;
+    .experience-card,
+    .publication-card {
+        padding: 16px;
     }
 
-    .award-item {
-        padding: 20px;
+    .experience-header h3,
+    .publication-content h3 {
+        font-size: 16px;
     }
 
-    .award-item i {
-        font-size: 32px;
+    .experience-card li,
+    .publication-card li {
+        font-size: 13px;
+    }
+
+    .company,
+    .date,
+    .publication-description {
+        font-size: 13px;
     }
 }
 
